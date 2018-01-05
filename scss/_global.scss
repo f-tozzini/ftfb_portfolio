@@ -1,0 +1,51 @@
+$font-main: 'Gotham Light', Helvetica, Arial, sans-serif;
+$font-title: 'It Is Definitely Possible', Georgia, Times, serif;
+$font-subtitle: 'Gotham Black', Helvetica, Arial, sans-serif;
+
+$pink: rgb(218, 165, 203);
+$mainBlue: #0b455c;
+$mainPurple: #b26b93;
+$mainPink:#ee9393;
+// $transpBlue:rgb(11, 69, 92. 0.4);
+
+body
+{
+  color: $mainBlue;
+}
+
+@mixin smallParagraph {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+@mixin button
+{
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 5px;
+  font-family: $font-title;
+  font-size: 18px;
+  @include pinkGradient;
+  &:hover
+  {
+    @include blueGradient;
+  }
+}
+
+@mixin pinkGradient {
+  background: rgb(178,107,147); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(178,107,147,1) 1%, rgba(238,147,147,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(178,107,147,1) 1%,rgba(238,147,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(178,107,147,1) 1%,rgba(238,147,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin blueGradient {
+  background: rgb(8,52,69); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(8,52,69,1) 0%, rgba(178,107,147,1) 53%, rgba(238,147,147,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(8,52,69,1) 0%,rgba(178,107,147,1) 53%,rgba(238,147,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(8,52,69,1) 0%,rgba(178,107,147,1) 53%,rgba(238,147,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#083445', endColorstr='#ee9393',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

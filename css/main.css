@@ -1,0 +1,519 @@
+/*SASS document*/
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* End Reset */
+body {
+  color: #0b455c; }
+
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url(../assets/fonts/Gotham-Thin.otf); }
+@font-face {
+  font-family: 'Gotham Light';
+  src: url(../assets/fonts/Gotham-Light.otf); }
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url(../assets/fonts/Gotham-Medium.otf); }
+@font-face {
+  font-family: 'Gotham Black';
+  src: url(../assets/fonts/Gotham-Black.ttf); }
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url(../assets/fonts/Gotham-Ultra.ttf); }
+@font-face {
+  font-family: 'It Is Definitely Possible';
+  src: url(../assets/fonts/It-is-Definitely-Possible.ttf); }
+.hidden {
+  display: none; }
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+#mainContainer {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1750px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Gotham Light", Helvetica, Arial, sans-serif;
+  font-size: 20px; }
+
+.mainNav {
+  background-color: #ee9393;
+  color: white;
+  position: relative;
+  z-index: 2; }
+
+h2 {
+  font-family: "It Is Definitely Possible", Georgia, Times, serif;
+  color: #0b455c;
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 0 50px 0; }
+
+.bg-image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  clear: both; }
+
+.main-position {
+  position: relative;
+  z-index: 1; }
+
+#mainLogo {
+  height: 60%;
+  width: 60%;
+  margin: 40% 20%; }
+
+#quote {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  width: 200px;
+  margin: 0 auto;
+  line-height: 30px; }
+  #quote p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -55%; }
+  #quote #quote-author {
+    margin: 0 auto;
+    font-size: 12px;
+    font-style: italic;
+    text-align: right; }
+
+.fa-angle-double-down {
+  color: #fff;
+  margin: 15% 45%; }
+
+#services {
+  padding-top: 30px;
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
+  #services .icons {
+    margin: 0 auto;
+    margin-top: 10%; }
+  #services .icon-last {
+    margin: 0 auto;
+    margin-top: 10%; }
+  #services .icons img {
+    margin: 0 auto; }
+  #services .services-box {
+    background-color: #0b455c;
+    height: 250px;
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 15px;
+    color: #fff;
+    border-radius: 8px;
+    position: relative; }
+  #services h3 {
+    font-family: "Gotham Black", Helvetica, Arial, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 18px; }
+  #services p {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 20px 5px 20px; }
+
+#about {
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 24px; }
+  #about p {
+    text-align: center;
+    margin: 95% 5% 10% 5%; }
+  #about .button {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 5px;
+    font-family: "It Is Definitely Possible", Georgia, Times, serif;
+    font-size: 18px;
+    background: #b26b93;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    width: 60%; }
+    #about .button:hover {
+      background: #083445;
+      /* Old browsers */
+      background: -moz-linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#083445', endColorstr='#ee9393',GradientType=1 );
+      /* IE6-9 fallback on horizontal gradient */ }
+
+#projects {
+  margin: 0 auto;
+  text-align: center; }
+  #projects h4 {
+    font-family: "It Is Definitely Possible", Georgia, Times, serif;
+    font-size: 24px;
+    margin: 20px 0 30px 0; }
+  #projects .projects {
+    display: block;
+    margin-left: 8%; }
+    #projects .projects:hover img {
+      opacity: 0.7; }
+    #projects .projects:hover h4 {
+      color: #b26b93;
+      font-weight: bold; }
+  #projects #project6 {
+    margin-left: 11%;
+    margin-right: 9%;
+    display: block; }
+
+#contact {
+  z-index: 2;
+  position: relative;
+  width: 90%; }
+  #contact p {
+    font-size: 12px;
+    line-height: 24px;
+    margin-top: -10%;
+    margin-bottom: 10%; }
+  #contact label {
+    font-family: "Gotham Light", Helvetica, Arial, sans-serif;
+    color: #0b455c;
+    margin-bottom: 10px;
+    font-size: 12px; }
+  #contact .inputs {
+    border-radius: 8px;
+    color: #b26b93;
+    border-color: #b26b93;
+    box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5);
+    -webkit-box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5);
+    -moz-box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5); }
+  #contact input::placeholder {
+    color: #b26b93;
+    font-size: 12px; }
+  #contact .button {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 5px;
+    font-family: "It Is Definitely Possible", Georgia, Times, serif;
+    font-size: 18px;
+    background: #b26b93;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    width: 60%;
+    margin-top: 35px; }
+    #contact .button:hover {
+      background: #083445;
+      /* Old browsers */
+      background: -moz-linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #083445 0%, #b26b93 53%, #ee9393 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#083445', endColorstr='#ee9393',GradientType=1 );
+      /* IE6-9 fallback on horizontal gradient */ }
+
+footer {
+  z-index: 0;
+  height: 290px; }
+  footer #footer-bg {
+    z-index: 0; }
+  footer #footer-content {
+    position: relative;
+    z-index: 0;
+    display: block;
+    height: 100px;
+    padding-top: 150px;
+    margin-top: -150px; }
+  footer #logoFooter {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px; }
+    footer #logoFooter img {
+      margin-top: 50px; }
+  footer #social {
+    text-align: center;
+    padding: 5px 30px;
+    margin: 0 auto;
+    margin-top: 10px; }
+    footer #social i {
+      margin: 0 auto;
+      padding: 10px;
+      background-color: white;
+      color: #b26b93;
+      border-radius: 100px; }
+      footer #social i:hover {
+        background: #b26b93;
+        /* Old browsers */
+        background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */
+        color: white; }
+    footer #social .fa-facebook {
+      padding: 10px 13px;
+      border-radius: 100px;
+      margin: 0 40px; }
+
+@media screen and (min-width: 40em) {
+  /*640*/
+  #mainLogo {
+    height: 30%;
+    width: 30%;
+    margin: 10% 35%; }
+
+  #quote {
+    width: 300px;
+    line-height: 30px; }
+    #quote p {
+      text-align: center;
+      font-size: 14px;
+      margin-top: -10%; }
+
+  .fa-angle-double-down {
+    margin: 0 50%; }
+
+  #services {
+    margin-top: 12%;
+    width: 106%;
+    height: 110%; }
+    #services .icons, #services .icon-last {
+      margin-top: 0; }
+    #services .services-box {
+      background-color: #fff;
+      height: 130%;
+      width: 110%;
+      margin-left: 3%;
+      color: #fff;
+      padding: 0 10px 20px 10px; }
+    #services h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #0b455c; }
+    #services p {
+      line-height: 20px;
+      padding: 0;
+      color: #0b455c; }
+    #services #marketing {
+      margin-left: 2%; }
+    #services #design {
+      margin-left: 8%; }
+
+  #about {
+    margin-top: 30px; }
+    #about p {
+      margin: -5% 0 5% -11%;
+      width: 120%; }
+    #about img {
+      margin-right: 25px; }
+
+  #projects .projects {
+    margin-left: 0%; }
+  #projects #project6 {
+    margin-left: 0;
+    margin-right: 0; }
+
+  #contact p {
+    margin-top: 25% 0 0 0; }
+  #contact img {
+    margin-top: 50px; }
+
+  footer {
+    z-index: 0;
+    margin-top: -150px;
+    height: 100%; }
+    footer #footer-bg {
+      z-index: 0; }
+    footer #footer-content {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin-top: 0px; }
+    footer #logoFooter-medium {
+      width: 55px;
+      height: 55px;
+      z-index: 2;
+      position: relative;
+      margin: -70px 0 15px 30px; }
+    footer #social {
+      text-align: center;
+      position: relative;
+      padding: 5px 30px;
+      margin-top: 20px; }
+    footer .fa-facebook {
+      padding: 15px 20px;
+      border-radius: 75px;
+      margin: 0 80px; } }
+@media screen and (min-width: 64em) {
+  /*1024*/
+  header {
+    margin-bottom: 10%; }
+
+  #quote {
+    width: 400px;
+    line-height: 40px; }
+    #quote p {
+      font-size: 22px;
+      margin-top: -10%; }
+
+  .fa-angle-double-down {
+    margin-top: 70px; }
+
+  #services h3 {
+    font-size: 26px; }
+  #services p {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 26px; }
+
+  #about {
+    margin-top: 85px; }
+    #about p {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 33px; }
+    #about .button {
+      font-size: 22px; }
+
+  #contact {
+    margin-top: 45px; }
+    #contact p {
+      margin: 20px 0;
+      font-size: 18px;
+      line-height: 28px; }
+    #contact label {
+      margin-top: 15px;
+      font-size: 18px; }
+    #contact input::placeholder {
+      font-size: 16px;
+      padding: 15px 10px; }
+    #contact img {
+      margin-top: 80px; }
+    #contact .button {
+      font-size: 22px; }
+
+  footer #logoFooter-medium {
+    width: 85px;
+    height: 85px;
+    margin: -80px 0 20px 70px; }
+  footer #social i {
+    padding: 20px;
+    margin-top: 20px; }
+  footer #social .fa-facebook {
+    padding: 20px 23px;
+    border-radius: 75px; } }
+@media screen and (min-width: 74.375em) {
+  /*1190*/
+  #services {
+    margin-left: 5%; }
+
+  #logoFooter-medium {
+    width: 95px;
+    height: 95px; } }
+@media screen and (min-width: 85.375em) {
+  /*1366*/
+  header {
+    margin-bottom: 15%; }
+    header .fa-angle-double-down {
+      margin-top: 190px;
+      margin-bottom: 0; }
+
+  #services {
+    margin: 0 auto;
+    display: block; }
+
+  .about-box {
+    margin-left: -8%;
+    width: 50%; }
+    .about-box img {
+      margin-left: 200px; }
+
+  #projects, #contact {
+    margin-top: 70px; }
+
+  #contact img {
+    margin-top: 10px; }
+  #contact p {
+    line-height: 36px; }
+  #contact label {
+    padding: 5px 0; }
+  #contact .button {
+    margin-top: 10%; } }
+
+/*# sourceMappingURL=main.css.map */
