@@ -60,9 +60,6 @@ body {
   font-family: 'Gotham Black';
   src: url(../assets/fonts/Gotham-Black.ttf); }
 @font-face {
-  font-family: 'Gotham Ultra';
-  src: url(../assets/fonts/Gotham-Ultra.ttf); }
-@font-face {
   font-family: 'It Is Definitely Possible';
   src: url(../assets/fonts/It-is-Definitely-Possible.ttf); }
 .hidden {
@@ -75,21 +72,89 @@ body {
   height: 0;
   clear: both; }
 
+a, a:active, a:hover {
+  color: white; }
+
 #mainContainer {
   width: 100%;
+  height: 110%;
   min-width: 320px;
   max-width: 1750px;
-  height: 100%;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
+  background-color: #ffc3da;
   font-family: "Gotham Light", Helvetica, Arial, sans-serif;
   font-size: 20px; }
 
-.mainNav {
-  background-color: #ee9393;
+#mainNav {
   color: white;
   position: relative;
-  z-index: 2; }
+  z-index: 900;
+  overflow: scroll; }
+  #mainNav #navBox {
+    background: #b26b93;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    margin-top: 0;
+    opacity: 0.95;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    -moz-border-radius-topleft: 12px;
+    -moz-border-radius-bottomleft: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px; }
+
+i {
+  float: right;
+  cursor: pointer; }
+
+.fa-bars {
+  z-index: 950;
+  margin: 60px 40px 0 0;
+  color: #b26b93; }
+
+.fa-times-circle-o {
+  color: white;
+  position: relative;
+  z-index: 9999;
+  margin: 60px 40px 0 30px; }
+
+ul {
+  margin-top: 70px;
+  padding-bottom: 40px; }
+
+a {
+  font-size: 50px;
+  line-height: 90px;
+  color: white;
+  font-family: 'It Is Definitely Possible';
+  margin-left: 20%;
+  display: block; }
+  a:hover {
+    padding: 5px 0;
+    text-decoration: overline underline blink; }
+
+#logoMenu {
+  height: 65px;
+  width: 65px;
+  float: right;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 9999;
+  margin-left: -50px; }
+
+#main-menu, #close-menu {
+  display: none; }
+
+.sticky {
+  position: fixed; }
 
 h2 {
   font-family: "It Is Definitely Possible", Georgia, Times, serif;
@@ -159,7 +224,7 @@ h2 {
     border-radius: 8px;
     position: relative; }
   #services h3 {
-    font-family: "Gotham Black", Helvetica, Arial, sans-serif;
+    font-family: "Gotham Medium", Helvetica, Arial, sans-serif;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 18px; }
@@ -209,22 +274,61 @@ h2 {
 #projects {
   margin: 0 auto;
   text-align: center; }
-  #projects h4 {
+  #projects h3 {
     font-family: "It Is Definitely Possible", Georgia, Times, serif;
     font-size: 24px;
     margin: 20px 0 30px 0; }
   #projects .projects {
     display: block;
     margin-left: 8%; }
-    #projects .projects:hover img {
+    #projects .projects:hover .trigger {
       opacity: 0.7; }
-    #projects .projects:hover h4 {
+    #projects .projects:hover h3 {
       color: #b26b93;
       font-weight: bold; }
   #projects #project6 {
     margin-left: 11%;
     margin-right: 9%;
     display: block; }
+
+.lightbox {
+  display: none;
+  margin-top: -35px;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 999999;
+  margin-left: 13%;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
+  -moz-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
+  box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5); }
+  .lightbox .lightbox-header {
+    margin-top: 15px;
+    height: 230px;
+    clear: both; }
+  .lightbox i {
+    padding: 15px;
+    margin-top: 10px;
+    color: #b26b93;
+    cursor: pointer; }
+  .lightbox .fa-times-circle-o {
+    float: right;
+    padding: 20px 0 20px 0; }
+  .lightbox img {
+    height: 230px;
+    width: 250px;
+    opacity: 100%; }
+  .lightbox p {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 15px 55px; }
+  .lightbox h4 {
+    font-family: "It Is Definitely Possible", Georgia, Times, serif;
+    font-size: 24px;
+    padding: 10px 0; }
 
 #contact {
   z-index: 2;
@@ -282,57 +386,85 @@ h2 {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#083445', endColorstr='#ee9393',GradientType=1 );
       /* IE6-9 fallback on horizontal gradient */ }
 
-footer {
+footer #footer-bg {
   z-index: 0;
-  height: 290px; }
-  footer #footer-bg {
-    z-index: 0; }
-  footer #footer-content {
-    position: relative;
-    z-index: 0;
-    display: block;
-    height: 100px;
-    padding-top: 150px;
-    margin-top: -150px; }
-  footer #logoFooter {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 20%;
+  position: absolute; }
+footer #footer-content {
+  padding-top: 10px;
+  position: relative;
+  z-index: 100; }
+footer .logoFooter {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 20%;
+  margin: 0 auto;
+  display: block; }
+footer #social {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: -2%; }
+  footer #social i {
     margin: 0 auto;
+    text-align: center;
+    padding: 10px 13px;
     display: block;
-    padding-top: 20px; }
-    footer #logoFooter img {
-      margin-top: 50px; }
+    position: relative;
+    background-color: white;
+    color: #b26b93;
+    border-radius: 100%;
+    font-size: 1.3rem; }
+    footer #social i:hover {
+      background: #b26b93;
+      /* Old browsers */
+      background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
+      /* IE6-9 fallback on horizontal gradient */
+      color: white; }
+  footer #social .fa-facebook {
+    padding: 10px 16px;
+    margin: 0 30px; }
+
+@media screen and (min-width: 31.25em) {
+  /*500*/
+  #navBox .fa-bars {
+    margin: 60px 60px 0 0px; }
+  #navBox .fa-times-circle-o {
+    margin: 60px 60px 0 30px; }
+  #navBox ul {
+    margin-top: 120px;
+    margin-left: 20px; }
+  #navBox li a {
+    line-height: 110px; }
+
   footer #social {
     text-align: center;
-    padding: 5px 30px;
-    margin: 0 auto;
-    margin-top: 10px; }
-    footer #social i {
-      margin: 0 auto;
-      padding: 10px;
-      background-color: white;
-      color: #b26b93;
-      border-radius: 100px; }
-      footer #social i:hover {
-        background: #b26b93;
-        /* Old browsers */
-        background: -moz-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(45deg, #b26b93 1%, #ee9393 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b26b93', endColorstr='#ee9393',GradientType=1 );
-        /* IE6-9 fallback on horizontal gradient */
-        color: white; }
-    footer #social .fa-facebook {
-      padding: 10px 13px;
-      border-radius: 100px;
-      margin: 0 40px; }
-
+    margin-top: 15px;
+    margin-left: -8%; } }
 @media screen and (min-width: 40em) {
   /*640*/
+  #mainNav {
+    padding: 40px 40px 10px 0;
+    margin: -40px 0 0 -40px; }
+    #mainNav .fa-bars {
+      margin: 70px 130px 0 0; }
+    #mainNav .fa-times-circle-o {
+      margin: 70px 130px 0 30px; }
+    #mainNav ul {
+      margin-top: 85px;
+      margin-left: 10%; }
+    #mainNav li a {
+      font-size: 30px;
+      margin-left: 20px;
+      line-height: 50px; }
+    #mainNav #logoMenu {
+      height: 50px;
+      width: 50px; }
+
   #mainLogo {
     height: 30%;
     width: 30%;
@@ -389,41 +521,42 @@ footer {
     margin-left: 0;
     margin-right: 0; }
 
+  .lightbox {
+    margin-left: 0%; }
+
   #contact p {
     margin-top: 25% 0 0 0; }
   #contact img {
     margin-top: 50px; }
 
-  footer {
-    z-index: 0;
-    margin-top: -150px;
-    height: 100%; }
-    footer #footer-bg {
-      z-index: 0; }
-    footer #footer-content {
-      position: relative;
-      z-index: 1;
-      display: block;
-      margin-top: 0px; }
-    footer #logoFooter-medium {
-      width: 55px;
-      height: 55px;
-      z-index: 2;
-      position: relative;
-      margin: -70px 0 15px 30px; }
-    footer #social {
-      text-align: center;
-      position: relative;
-      padding: 5px 30px;
-      margin-top: 20px; }
-    footer .fa-facebook {
-      padding: 15px 20px;
-      border-radius: 75px;
-      margin: 0 80px; } }
+  footer #footer-content {
+    padding-top: 0px;
+    position: relative;
+    z-index: 100; }
+  footer #social {
+    margin: 30px 0 0 30px; } }
 @media screen and (min-width: 64em) {
   /*1024*/
   header {
     margin-bottom: 10%; }
+
+  #mainNav {
+    padding: 20px 0 30px 0;
+    margin-top: 0; }
+    #mainNav .fa-bars {
+      margin: 65px 180px 0 0px; }
+    #mainNav .fa-times-circle-o {
+      margin: 65px 180px 0 30px; }
+    #mainNav li a {
+      font-size: 45px;
+      line-height: 90px;
+      margin-left: 70px; }
+    #mainNav #logoMenu {
+      height: 65px;
+      width: 65px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 99999; }
 
   #quote {
     width: 400px;
@@ -433,7 +566,7 @@ footer {
       margin-top: -10%; }
 
   .fa-angle-double-down {
-    margin-top: 70px; }
+    margin-top: 30px; }
 
   #services h3 {
     font-size: 26px; }
@@ -468,31 +601,51 @@ footer {
     #contact .button {
       font-size: 22px; }
 
-  footer #logoFooter-medium {
-    width: 85px;
-    height: 85px;
-    margin: -80px 0 20px 70px; }
+  footer #footer-content {
+    margin: 30px 0 0 -20px;
+    padding-top: 20px; }
   footer #social i {
-    padding: 20px;
-    margin-top: 20px; }
-  footer #social .fa-facebook {
-    padding: 20px 23px;
-    border-radius: 75px; } }
+    font-size: 2rem; } }
 @media screen and (min-width: 74.375em) {
   /*1190*/
-  #services {
-    margin-left: 5%; }
+  #mainNav {
+    padding: 30px 90px 25px 30px;
+    margin-top: 0px;
+    margin-left: 40px; }
+    #mainNav .fa-bars {
+      margin: 55px 180px 0 0;
+      font-size: 2.75em; }
+    #mainNav .fa-times-circle-o {
+      margin: 55px 180px 0 30px;
+      font-size: 2.75em; }
+    #mainNav ul {
+      margin-top: 85px;
+      margin-left: 70px; }
+    #mainNav li a {
+      font-size: 50px;
+      line-height: 100px; }
 
-  #logoFooter-medium {
-    width: 95px;
-    height: 95px; } }
+  #services {
+    margin-left: 5%; } }
 @media screen and (min-width: 85.375em) {
   /*1366*/
   header {
     margin-bottom: 15%; }
     header .fa-angle-double-down {
-      margin-top: 190px;
+      margin-top: 80px;
       margin-bottom: 0; }
+
+  #mainNav {
+    padding-bottom: 100px;
+    margin-right: 0;
+    width: 65%; }
+    #mainNav .fa-bars {
+      margin: 90px 220px 0 0; }
+    #mainNav .fa-times-circle-o {
+      margin: 90px 220px 0 30px;
+      font-size: 2.75em; }
+    #mainNav ul {
+      margin-top: 150px; }
 
   #services {
     margin: 0 auto;
@@ -514,6 +667,13 @@ footer {
   #contact label {
     padding: 5px 0; }
   #contact .button {
-    margin-top: 10%; } }
+    margin-top: 10%; }
+
+  footer #social {
+    margin: 50px 0 0 -50px; }
+  footer .logoFooter {
+    height: 110px;
+    width: 110px;
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
