@@ -1,635 +1,838 @@
-/*SASS document*/
+  /*SASS document*/
 
-@import "reset";
-@import "global";
-@import "fonts";
+  @import "reset";
+  @import "global";
+  @import "fonts";
 
 
-.hidden {
-  display: none;
-}
-
-.clearfix:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-#mainContainer
-{
-  width: 100%;
-  min-width: 320px;
-  max-width: 1750px;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  // background-color: rgb(255, 195, 218);
-  font-family: $font-main;
-  font-size:20px;
-}
-
-.mainNav
-{
-  background-color: $mainPink;
-  color: white;
-  position: relative;
-  z-index: 2;
-}
-
-h2
-{
-  font-family: $font-title;
-  color: $mainBlue;
-  font-size: 60px;
-  font-weight: 400;
-  text-align: center;
-  margin: 10px 0 50px 0;
-}
-
-.bg-image
-{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 0;
-  clear:both;
-}
-
-.main-position
-{
-  position: relative;
-  z-index: 1;
-}
-
-#mainLogo
-{
-  height: 60%;
-  width: 60%;
-  margin: 40% 20%;
-}
-
-#quote
-{
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  width: 200px;
-  margin: 0 auto;
-  line-height: 30px;
-  // background-color: rgb(177, 52, 86);
-  p
-  {
-    text-align: center;
-    font-size: 18px;
-    margin-top: -55%;
-    // background-color: rgb(150, 130, 7);
+  .hidden {
+    display: none;
   }
-  #quote-author
-  {
-    margin: 0 auto;
-    font-size: 12px;
-    font-style: italic;
-    text-align: right;
-    // background-color: rgb(52, 159, 105);
-  }
-}
 
-.fa-angle-double-down
-{
-  color: #fff;
-  margin: 15% 45%;
-}
-#services
-{
-  padding-top: 30px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  .icons
-  {
-    // background-color: rgb(120, 31, 175);
-    margin: 0 auto;
-    margin-top: 10%;
-  }
-  .icon-last
-{
-  margin: 0 auto;
-  // background-color: rgb(120, 31, 175);
-  margin-top: 10%;
-}
-.icons img
-{
-  margin: 0 auto;
-}
-  .services-box
-  {
-    background-color: $mainBlue;
-    height: 250px;
-    width: 240px;
-    margin: 0 auto;
-    margin-top: 15px;
-    color: #fff;
-    border-radius: 8px;
-    position: relative;
-  }
-  h3
-  {
-    font-family: $font-subtitle;
-    padding-top:20px;
-    padding-bottom:10px;
-    font-size: 18px;
-  }
-  p
-  {
-    @include smallParagraph;
-    padding:0 20px 5px 20px;
-  }
-}
-
-#about
-{
-    margin-top: 30px;
-    @include smallParagraph;
-    p
-    {
-    text-align: center;
-    margin: 95% 5% 10% 5%;
-  }
-  .button
-  {
-    @include button;
-    width: 60%;
-  }
-}
-
-#projects
-{
-  margin: 0 auto;
-  text-align: center;
-  h4
-  {
-    font-family: $font-title;
-    // font-weight: bold;
-    font-size: 24px;
-    margin: 20px 0 30px 0;
-  }
-  .projects
-  {
+  .clearfix:after {
+    content: " ";
+    visibility: hidden;
     display: block;
-    margin-left: 8%;
-    &:hover
-    {
-    img{
-      opacity: 0.7;
-      }
-    h4{
-    color:$mainPurple;
-    font-weight: bold;
+    height: 0;
+    clear: both;
   }
-    }
-  }
-#project6
-  {
-  margin-left: 11%;
-  margin-right: 9%;
-  display: block;
-  }
-}
 
-#contact
-{
-  z-index: 2;
-  position: relative;
-  width: 90%;
-  p
+  a, a:active, a:hover
   {
-    @include smallParagraph;
-    margin-top: -10%;
-    margin-bottom:10%;
+    color: white;
   }
-  label
+
+  #mainContainer
   {
+    width: 100%;
+    height: 110%;
+    min-width: 320px;
+    max-width: 1750px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(255, 195, 218);
     font-family: $font-main;
-    color: $mainBlue;
-    margin-bottom: 10px;
-    font-size: 12px;
+    font-size:20px;
   }
-  .inputs
-  {
 
-    border-radius: 8px;
-    color: $mainPurple;
-    border-color: $mainPurple;
-    box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
-    -webkit-box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
-    -moz-box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
-  }
-  input::placeholder
+  #mainNav
   {
-    color:$mainPurple;
-    font-size: 12px;
-  }
-  .button{
-    @include button;
-    width: 60%;
-    margin-top: 35px;
-  }
-}
-footer
-{
-  z-index: 0;
-  height: 290px;
-  #footer-bg
-  {
-    // position: absolute;
-    z-index: 0;
-    // display: block;
-  }
-  #footer-content
-  {
+    color: white;
     position: relative;
-    z-index: 0;
-    display: block;
-    // background-color: rgb(193, 191, 16);
-    height: 100px;
-    padding-top: 150px;
-    margin-top: -150px;
-  }
-  #logoFooter
-  {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 20%;
-    margin: 0 auto;
-    display: block;
-    padding-top: 20px;
-    // background-color: rgb(4, 120, 70);
-    img{
-      margin-top: 50px;
-    }
-  }
-  #social
-  {
-    text-align: center;
-    padding: 5px 30px;
-    margin: 0 auto;
-    margin-top: 10px;
-    // background-color: rgb(103, 224, 18);
-  i
-  {
-
-    margin: 0 auto;
-    padding: 10px;
-    background-color: white;
-    color: $mainPurple;
-    border-radius: 100px;
-    &:hover
+    z-index: 900;
+    overflow: scroll;
+    #navBox
     {
       @include pinkGradient;
-      color:white;
-    }
-  }
-  .fa-facebook
-  {
-    padding: 10px 13px;
-    border-radius: 100px;
-    margin: 0 40px;
-    // background-color: rgb(33, 163, 167);
-  }
-  }
+      margin-top: 0;
+      opacity: 0.95;
+      -webkit-border-top-left-radius: 12px;
+        -webkit-border-bottom-left-radius: 12px;
+        -moz-border-radius-topleft: 12px;
+        -moz-border-radius-bottomleft: 12px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
 }
+    }
+    i
+    {
+      float: right;
+      cursor: pointer;
 
+    }
+    .fa-bars
+    {
+      z-index: 950;
+      margin: 60px 40px 0 0;
+      color: $mainPurple;
+    }
+    .fa-times-circle-o {
+      color: white;
+      position: relative;
+      z-index: 9999;
+      margin: 60px 40px 0 30px;
+    }
+    ul {
+      margin-top: 70px;
+      padding-bottom: 40px;
+    }
+    a
+    {
+      font-size: 50px;
+      line-height: 90px;
+      color: white;
+      font-family: 'It Is Definitely Possible';
+      margin-left: 20%;
+      display: block;;
+      &:hover
+      {
+        padding: 5px 0;
+        text-decoration: overline underline blink;
+      }
+    }
+    #logoMenu
+    {
+      height: 65px;
+      width: 65px;
+      float: right;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 9999;
+      margin-left: -50px;
+    }
+  #main-menu, #close-menu
+  {
+    display: none;
+  }
 
+  .sticky
+  {
+    position: fixed;
+  }
 
+  h2
+  {
+    font-family: $font-title;
+    color: $mainBlue;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0 50px 0;
+  }
 
-@media screen and (min-width:40em) { /*640*/
+  .bg-image
+  {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    clear:both;
+
+  }
+
+  .main-position
+  {
+    position: relative;
+    z-index: 1;
+  }
+
   #mainLogo
   {
-    height: 30%;
-    width: 30%;
-    margin: 10% 35%;
+    height: 60%;
+    width: 60%;
+    margin: 40% 20%;
   }
 
   #quote
   {
-    width: 300px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    width: 200px;
+    margin: 0 auto;
     line-height: 30px;
     // background-color: rgb(177, 52, 86);
     p
     {
       text-align: center;
-      font-size: 14px;
-      margin-top: -10%;
+      font-size: 18px;
+      margin-top: -55%;
       // background-color: rgb(150, 130, 7);
+    }
+    #quote-author
+    {
+      margin: 0 auto;
+      font-size: 12px;
+      font-style: italic;
+      text-align: right;
+      // background-color: rgb(52, 159, 105);
     }
   }
 
   .fa-angle-double-down
   {
-    margin: 0 50%;
+    color: #fff;
+    margin: 15% 45%;
   }
-
   #services
   {
-    margin-top: 12%;
-    width: 106%;
-    height: 110%;
-    .icons, .icon-last
+    padding-top: 30px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    .icons
     {
-      margin-top: 0;
+      // background-color: rgb(120, 31, 175);
+      margin: 0 auto;
+      margin-top: 10%;
     }
+    .icon-last
+  {
+    margin: 0 auto;
+    // background-color: rgb(120, 31, 175);
+    margin-top: 10%;
+  }
+  .icons img
+  {
+    margin: 0 auto;
+  }
     .services-box
     {
-      background-color: #fff;
-      height: 130%;
-      width: 110%;
-      // margin: 0 auto;
-      margin-left: 3%;
+      background-color: $mainBlue;
+      height: 250px;
+      width: 240px;
+      margin: 0 auto;
+      margin-top: 15px;
       color: #fff;
-      padding: 0 10px 20px 10px;
+      border-radius: 8px;
+      position: relative;
     }
     h3
     {
-      margin:0;
+      font-family: $font-subtitle;
+      padding-top:20px;
+      padding-bottom:10px;
       font-size: 18px;
-      color: $mainBlue;
     }
     p
     {
-      line-height: 20px;
-      padding:0;
-      color: $mainBlue;
-    }
-    #marketing
-    {
-      margin-left: 2%;
-    }
-    #design
-    {
-      margin-left: 8%;
+      @include smallParagraph;
+      padding:0 20px 5px 20px;
     }
   }
 
   #about
   {
       margin-top: 30px;
-  p
-    {
-      margin: -5% 0 5% -11%;
-      width:120%;
+      @include smallParagraph;
+      p
+      {
+      text-align: center;
+      margin: 95% 5% 10% 5%;
     }
-    img
+    .button
     {
-      margin-right: 25px;
+      @include button;
+      width: 60%;
     }
   }
 
   #projects
   {
+    margin: 0 auto;
+    text-align: center;
+    h3
+    {
+      font-family: $font-title;
+      font-size: 24px;
+      margin: 20px 0 30px 0;
+    }
     .projects
     {
-      margin-left: 0%;
+      display: block;
+      margin-left: 8%;
+      &:hover
+      {
+      .trigger{
+        opacity: 0.7;
+        }
+      h3{
+      color:$mainPurple;
+      font-weight: bold;
+    }
+      }
     }
   #project6
     {
-    margin-left:0;
-    margin-right: 0;
-    }
-  }
-
-#contact
-{
-  p
-    {
-      margin-top: 25% 0 0 0;
-      // background-color: rgb(188, 65, 250);
-    }
-  img
-    {
-      margin-top: 50px;
-    }
-}
-
-footer
-{
-  z-index: 0;
-  margin-top: -150px;
-  height: 100%;
-  #footer-bg
-  {
-    z-index: 0;
-  }
-  #footer-content
-  {
-    position: relative;
-    z-index: 1;
+    margin-left: 11%;
+    margin-right: 9%;
     display: block;
-    margin-top: 0px;
+    }
   }
-  #logoFooter-medium
+
+  .lightbox
   {
-    width: 55px;
-    height: 55px;
-    z-index: 2;
-    position: relative;
-    margin: -70px 0 15px 30px;
-  }
-  #social
-  {
+    display: none;
+    margin-top: -35px;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
     text-align: center;
-    position: relative;
-    padding: 5px 30px;
-    margin-top: 20px;
-  }
-
-
-  .fa-facebook
-  {
-    padding: 15px 20px;
-    border-radius: 75px;
-    margin: 0 80px;
-  }
-}
-}
-
-@media screen and (min-width:64em) { /*1024*/
-
-  header
-  {
-    margin-bottom: 10%;
-  }
-  #quote
-  {
-    width: 400px;
-    line-height: 40px;
-    p
-    {
-      font-size: 22px;
-      margin-top: -10%;
-    }
-  }
-
-  .fa-angle-double-down
-  {
-    margin-top: 70px;
-  }
-  #services{
-    h3
-    {
-      font-size: 26px;
-    }
-    p
-    {
-      padding: 10px;
-      font-size: 16px;
-      line-height: 26px;
-    }
-  }
-
-  #about
-  {
-    margin-top: 85px;
-    p
-    {
-      margin-top: 10px;
-      font-size: 18px;
-      line-height: 33px;
-    }
-    .button
-    {
-      font-size: 22px;
-    }
-  }
-
-#contact
-{
-  margin-top: 45px;
-  p
-  {
-    margin: 20px 0;
-    font-size: 18px;
-    line-height: 28px;
-  }
-  label
-  {
-    margin-top: 15px;
-    font-size: 18px;
-  }
-  input::placeholder
-  {
-    font-size: 16px;
-    padding: 15px 10px;
-  }
-  img
-  {
-    margin-top: 80px;
-  }
-  .button
-  {
-    font-size: 22px;
-  }
-}
-footer
-{
-  #logoFooter-medium
-  {
-    width: 85px;
-    height: 85px;
-    margin: -80px 0 20px 70px;
-  }
-  #social
-  {
-  i
-  {
-    padding: 20px;
-    margin-top: 20px;
-  }
-  .fa-facebook
-  {
-    padding: 20px 23px;
-    border-radius: 75px;
-  }
-}
-}
-
-}
-
-@media screen and (min-width:74.375em) { /*1190*/
-
-  #services
-  {
-    margin-left: 5%;
-  }
-#logoFooter-medium
-    {
-      width: 95px;
-      height: 95px;
-    }
-}
-
-@media screen and (min-width:85.375em) { /*1366*/
-  header
-  {
-    margin-bottom: 15%;
-    .fa-angle-double-down
-    {
-      margin-top: 190px;
-      margin-bottom: 0;
-    }
-  }
-
-  #services
-  {
+    position: absolute;
     margin: 0 auto;
-    display: block;
-  }
-  .about-box
-  {
-    margin-left: -8%;
-    width: 50%;
+    z-index: 999999;
+    margin-left: 13%;
+    // overflow: scroll;
+      -webkit-box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
+      -moz-box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
+      box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
+    .lightbox-header
+    {
+      margin-top:15px;
+      height:230px;
+      clear: both;
+    }
+    i
+    {
+      padding: 15px;
+      margin-top: 10px;
+      color: $mainPurple;
+      cursor: pointer;
+    }
+    .fa-times-circle-o,
+    {
+      float: right;
+      padding: 20px 0 20px 0;
+    }
     img
     {
-      margin-left: 200px;
+      height:230px;
+      width:250px;
+      opacity: 100%;
+    }
+    p
+    {
+      @include smallParagraph;
+      padding: 15px 55px;
+    }
+
+    h4{
+      font-family: $font-title;
+      font-size: 24px;
+      padding:10px 0;
+
     }
   }
-  #projects, #contact
-  {
-    margin-top: 70px;
-  }
+
   #contact
   {
-    img
-    {
-      margin-top: 10px;
-    }
+    z-index: 2;
+    position: relative;
+    width: 90%;
     p
     {
-      line-height: 36px;
+      @include smallParagraph;
+      margin-top: -10%;
+      margin-bottom:10%;
     }
     label
     {
-        padding: 5px 0;
+      font-family: $font-main;
+      color: $mainBlue;
+      margin-bottom: 10px;
+      font-size: 12px;
     }
-    .button
+    .inputs
     {
-      margin-top: 10%;
+      border-radius: 8px;
+      color: $mainPurple;
+      border-color: $mainPurple;
+      box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
+      -webkit-box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
+      -moz-box-shadow: 3px 3px 10px 1px rgba(133,133,133,0.5);
+    }
+    input::placeholder
+    {
+      color:$mainPurple;
+      font-size: 12px;
+    }
+    .button{
+      @include button;
+      width: 60%;
+      margin-top: 35px;
+    }
+  }
+  footer
+  {
+    #footer-bg
+    {
+      z-index: 0;
+      position: absolute;
+    }
+    #footer-content
+    {
+      padding-top: 10px;
+      position: relative;
+      z-index: 100;
+    }
+    .logoFooter
+    {
+      width: 95px;
+      height: 95px;
+      margin-bottom: 20%;
+      margin: 0 auto;
+      display: block;
+      // background-color: rgb(4, 120, 70);
+    }
+    #social
+    {
+      text-align: center;
+      margin-top: 15px;
+      margin-left: -2%;
+    i
+    {
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 13px;
+      display: block;
+      position: relative;
+      background-color: white;
+      color: $mainPurple;
+      border-radius: 100%;
+      font-size: 1.3rem;
+      &:hover
+      {
+        @include pinkGradient;
+        color:white;
+      }
+    }
+    .fa-facebook
+    {
+      padding: 10px 16px;
+      margin: 0 30px;
+    }
+    }
+  }
+
+  @media screen and (min-width:31.25em) { /*500*/
+    #navBox
+    {
+      .fa-bars
+      {
+        margin: 60px 60px 0 0px;
+      }
+      .fa-times-circle-o {
+        margin: 60px 60px 0 30px;
+      }
+      ul {
+        margin-top: 120px;
+        margin-left: 20px;
+      }
+      li a
+      {
+        line-height: 110px;
+      }
+        }
+
+        footer
+        {
+          #social
+          {
+            text-align: center;
+            margin-top: 15px;
+            margin-left: -8%;
+          }
+        }
+  }
+
+  @media screen and (min-width:40em) { /*640*/
+
+    #mainNav
+    {
+      padding: 40px 40px 10px 0;
+      margin: -40px 0 0 -40px;
+      .fa-bars
+      {
+        margin: 70px 130px 0 0;
+      }
+      .fa-times-circle-o {
+        margin: 70px 130px 0 30px;
+      }
+      ul {
+        margin-top: 85px;
+        margin-left: 10%;
+      }
+      li a
+      {
+        font-size: 30px;
+        margin-left: 20px;
+        line-height: 50px;
+      }
+      #logoMenu
+      {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    #mainLogo
+    {
+      height: 30%;
+      width: 30%;
+      margin: 10% 35%;
+    }
+
+    #quote
+    {
+      width: 300px;
+      line-height: 30px;
+      // background-color: rgb(177, 52, 86);
+      p
+      {
+        text-align: center;
+        font-size: 14px;
+        margin-top: -10%;
+        // background-color: rgb(150, 130, 7);
+      }
+    }
+
+    .fa-angle-double-down
+    {
+      margin: 0 50%;
+    }
+
+    #services
+    {
+      margin-top: 12%;
+      width: 106%;
+      height: 110%;
+      .icons, .icon-last
+      {
+        margin-top: 0;
+      }
+      .services-box
+      {
+        background-color: #fff;
+        height: 130%;
+        width: 110%;
+        // margin: 0 auto;
+        margin-left: 3%;
+        color: #fff;
+        padding: 0 10px 20px 10px;
+      }
+      h3
+      {
+        margin:0;
+        font-size: 18px;
+        color: $mainBlue;
+      }
+      p
+      {
+        line-height: 20px;
+        padding:0;
+        color: $mainBlue;
+      }
+      #marketing
+      {
+        margin-left: 2%;
+      }
+      #design
+      {
+        margin-left: 8%;
+      }
+    }
+
+    #about
+    {
+        margin-top: 30px;
+    p
+      {
+        margin: -5% 0 5% -11%;
+        width:120%;
+      }
+      img
+      {
+        margin-right: 25px;
+      }
+    }
+
+    #projects
+    {
+      .projects
+      {
+        margin-left: 0%;
+      }
+    #project6
+      {
+      margin-left:0;
+      margin-right: 0;
+      }
+    }
+
+    .lightbox
+    {
+      margin-left: 0%;
+    }
+
+  #contact
+  {
+    p
+      {
+        margin-top: 25% 0 0 0;
+        // background-color: rgb(188, 65, 250);
+      }
+    img
+      {
+        margin-top: 50px;
+      }
+  }
+
+  footer
+  {
+    #footer-content
+    {
+      padding-top: 0px;
+      position: relative;
+      z-index: 100;
+    }
+    #social
+    {
+      margin: 30px 0 0 30px;
+    }
+    }
+  }
+
+  @media screen and (min-width:64em) { /*1024*/
+
+    header
+    {
+      margin-bottom: 10%;
+    }
+    #mainNav
+    {
+      padding: 20px 0 30px 0;
+      margin-top: 0;
+    .fa-bars
+    {
+      margin: 65px 180px 0 0px;
+    }
+    .fa-times-circle-o {
+      margin: 65px 180px 0 30px;
+    }
+    li a
+    {
+      font-size: 45px;
+      line-height: 90px;
+      margin-left: 70px;
+    }
+    #logoMenu
+    {
+      height: 65px;
+      width: 65px;
+      margin-bottom: 20px;
+      // margin-right: -50px;
+      position: relative;
+      z-index: 99999;
     }
   }
 
 
-}
+    #quote
+    {
+      width: 400px;
+      line-height: 40px;
+      p
+      {
+        font-size: 22px;
+        margin-top: -10%;
+      }
+    }
 
+    .fa-angle-double-down
+    {
+      margin-top: 30px;
+    }
+    #services{
+      h3
+      {
+        font-size: 26px;
+      }
+      p
+      {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
 
-// #hamburger-menu {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   font-size: 2.5rem;
-//   color: #ffffff;
-//   margin: 0.25rem 0.75rem 0 0;
-//   cursor: pointer;
-//   outline: 0;
-//   transition: all 0.6s ease;
-// }
+    #about
+    {
+      margin-top: 85px;
+      p
+      {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 33px;
+      }
+      .button
+      {
+        font-size: 22px;
+      }
+    }
+
+  #contact
+  {
+    margin-top: 45px;
+    p
+    {
+      margin: 20px 0;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    label
+    {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    input::placeholder
+    {
+      font-size: 16px;
+      padding: 15px 10px;
+    }
+    img
+    {
+      margin-top: 80px;
+    }
+    .button
+    {
+      font-size: 22px;
+    }
+  }
+  footer
+  {
+    #footer-content
+    {
+      margin: 30px 0 0 -20px;
+      padding-top: 20px;
+
+    }
+    #social i
+    {
+    font-size: 2rem;
+    }
+  }
+
+  }
+
+  @media screen and (min-width:74.375em) { /*1190*/
+
+    #mainNav
+    {
+      padding: 30px 90px 25px 30px;
+      margin-top: 0px;
+      margin-left: 40px;
+      .fa-bars
+      {
+        margin: 55px 180px 0 0;
+        font-size: 2.75em;
+      }
+      .fa-times-circle-o {
+        margin: 55px 180px 0 30px;
+        font-size: 2.75em;
+      }
+      ul {
+        margin-top: 85px;
+        margin-left: 70px;
+      }
+      li a
+      {
+        font-size: 50px;
+        line-height: 100px;
+      }
+
+    }
+    #services
+    {
+      margin-left: 5%;
+    }
+  }
+
+  @media screen and (min-width:85.375em) { /*1366*/
+    header
+    {
+      margin-bottom: 15%;
+      .fa-angle-double-down
+      {
+        margin-top: 80px;
+        margin-bottom: 0;
+      }
+    }
+    #mainNav
+    {
+      padding-bottom: 100px;
+      margin-right: 0;
+      width: 65%;
+      .fa-bars
+      {
+        margin: 90px 220px 0 0;
+      }
+      .fa-times-circle-o {
+        margin: 90px 220px 0 30px;
+        font-size: 2.75em;
+      }
+      ul
+      {
+        margin-top: 150px;
+      }
+  }
+    #services
+    {
+      margin: 0 auto;
+      display: block;
+    }
+    .about-box
+    {
+      margin-left: -8%;
+      width: 50%;
+      img
+      {
+        margin-left: 200px;
+      }
+    }
+    #projects, #contact
+    {
+      margin-top: 70px;
+    }
+    #contact
+    {
+      img
+      {
+        margin-top: 10px;
+      }
+      p
+      {
+        line-height: 36px;
+      }
+      label
+      {
+          padding: 5px 0;
+      }
+      .button
+      {
+        margin-top: 10%;
+      }
+    }
+    footer
+    {
+    #social
+    {
+      margin: 50px 0 0 -50px;
+    }
+    .logoFooter
+    {
+      height: 110px;
+      width: 110px;
+      margin-top: 20px;
+    }
+  }
+
+  }
