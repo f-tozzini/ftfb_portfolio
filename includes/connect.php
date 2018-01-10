@@ -1,4 +1,4 @@
- <?php
+<?php
    $user = "root";
    $pass = "root";
    $host = "localhost";
@@ -7,4 +7,5 @@
    if (!$conn) {
      echo 'not connected';
    }
+   echo "connected!!!!!!!!!!!!!!";
  ?>
