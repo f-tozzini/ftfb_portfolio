@@ -336,8 +336,8 @@ h2 {
   #contact p {
     font-size: 12px;
     line-height: 24px;
-    margin-top: -10%;
-    margin-bottom: 10%; }
+    margin-top: -5%;
+    margin-bottom: 5%; }
   #contact label {
     font-family: "Gotham Light", Helvetica, Arial, sans-serif;
     color: #0b455c;
@@ -526,7 +526,7 @@ footer #social {
     margin-left: 0%; }
 
   #contact p {
-    margin-top: 25% 0 0 0; }
+    line-height: 22px; }
   #contact img {
     margin-top: 50px; }
 
@@ -590,7 +590,7 @@ footer #social {
     #contact p {
       margin: 20px 0;
       font-size: 18px;
-      line-height: 18px; }
+      line-height: 24px; }
     #contact label {
       margin-top: 15px;
       font-size: 18px; }

@@ -332,8 +332,8 @@
     p
     {
       @include smallParagraph;
-      margin-top: -10%;
-      margin-bottom:10%;
+      margin-top: -5%;
+      margin-bottom:5%;
     }
     label
     {
@@ -579,7 +579,8 @@
   {
     p
       {
-        margin-top: 25% 0 0 0;
+        // margin: 25% 0 0 0;
+        line-height: 22px;
         // background-color: rgb(188, 65, 250);
       }
     img
@@ -688,7 +689,7 @@
     {
       margin: 20px 0;
       font-size: 18px;
-      line-height: 18px;
+      line-height: 24px;
     }
     label
     {

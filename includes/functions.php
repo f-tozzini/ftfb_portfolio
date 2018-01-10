@@ -1,54 +1,79 @@
 <?php
 include('connect.php');
 
-$myQuery = "SELECT * FROM tbl_projects";
-$result = mysqli_query($link, $myQuery);
+// get all the content when the page loads
+if (isset($_GET['getAllContent'])) {
+	$myQuery = "SELECT * FROM tbl_projects"; //select id, project thumb and title instead of *
 
-$rows = array();
+	$result = mysqli_query($conn, $myQuery);
 
-while($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
+	$rows = array();
+
+	while($row = mysqli_fetch_assoc($result)) {
+	  $rows[] = $row;
+	}
+
+	$newResult = json_encode($rows);
+
+	echo $newResult;
 }
 
-var_dump($row);
-        //printf($rows);
-        //
-        //$myresult = json_encode($rows);
-        //echo $myresult;
+// this query gets a single result by project title -> not sure how you're calling this from your js stuff
 
-      if (isset($_GET['projectTitle'])) {
-          $title = $_GET['projectTitle'];
+if (isset($_GET['projectId'])) {
+  $title = $_GET['projectId'];
 
-          $myQuery = "SELECT * FROM tbl_projects WHERE projects_title = '$title'";
-          $result = mysqli_query($link, $myQuery);
+  $myQuery = "SELECT * FROM tbl_projects WHERE projects_title = '$title'";
 
-          $row = mysqli_fetch_assoc ($result);
+  $result = mysqli_query($conn, $myQuery);
 
-          echo json_encode($row);
-      }
+  $row = mysqli_fetch_assoc ($result);
 
-      if (isset($_GET['projectDesc'])) {
-          $desc = $_GET['projectDesc'];
+  echo json_encode($row);
+}
 
-          $myQuery = "SELECT * FROM tbl_projects WHERE projects_desc = '$desc'";
-          $result = mysqli_query($link, $myQuery);
+// this query does the same thing as above, but by description instead... why are you doing this?
 
-          $row = mysqli_fetch_assoc ($result);
+if (isset($_GET['projectDesc'])) {
+  $desc = $_GET['projectDesc'];
 
-          echo json_encode($row);
-      }
+  $myQuery = "SELECT * FROM tbl_projects WHERE projects_desc = '$desc'";
 
-      if (isset($_GET ['getImages'])) {
-        $myQuery = "SELECT * FROM tbl_projects";
-        $result = mysqli_query($link, $myQuery);
+  $result = mysqli_query($conn, $myQuery);
 
-        $rows = array();
-        while($row = mysqli_fetch_assoc($result)) {
-          $rows[] = $row;
+  $row = mysqli_fetch_assoc ($result);
 
-        }
-          echo json_encode($rows);
-      }
+  echo json_encode($row);
+}
 
+// this query does the same as the query at the very top of the file... you should probable rework this to get just the images that you want (or just that column from the database) - I changed the query for your reference
 
- ?>
+if (isset($_GET ['projectsThumb'])) {
+	$myQuery = "SELECT projects_thumb FROM tbl_projects";
+
+	$result = mysqli_query($conn, $myQuery);
+
+	$rows = array();
+
+	while($row = mysqli_fetch_assoc($result)) {
+	  $rows[] = $row;
+	}
+
+	echo json_encode($rows);
+}
+
+if (isset($_GET ['projectsImage '])) {
+	$myQuery = "SELECT projects_lb FROM tbl_projects";
+
+	$result = mysqli_query($conn, $myQuery);
+
+	$rows = array();
+
+	while($row = mysqli_fetch_assoc($result)) {
+	  $rows[] = $row;
+	}
+
+	echo json_encode($rows);
+}
+
+?>
