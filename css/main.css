@@ -82,7 +82,6 @@ a, a:active, a:hover {
   max-width: 1750px;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #ffc3da;
   font-family: "Gotham Light", Helvetica, Arial, sans-serif;
   font-size: 20px; }
 
@@ -118,7 +117,8 @@ i {
 .fa-bars {
   z-index: 950;
   margin: 60px 40px 0 0;
-  color: #b26b93; }
+  color: #b26b93;
+  z-index: 599; }
 
 .fa-times-circle-o {
   color: white;
@@ -130,15 +130,14 @@ ul {
   margin-top: 70px;
   padding-bottom: 40px; }
 
-a {
+li a {
   font-size: 50px;
   line-height: 90px;
   color: white;
   font-family: 'It Is Definitely Possible';
   margin-left: 20%;
   display: block; }
-  a:hover {
-    padding: 5px 0;
+  li a:hover {
     text-decoration: overline underline blink; }
 
 #logoMenu {
@@ -147,7 +146,7 @@ a {
   float: right;
   margin-bottom: 20px;
   position: relative;
-  z-index: 9999;
+  z-index: 999;
   margin-left: -50px; }
 
 #main-menu, #close-menu {
@@ -346,6 +345,7 @@ h2 {
     font-size: 12px; }
   #contact .inputs {
     border-radius: 8px;
+    padding: 10px;
     color: #b26b93;
     border-color: #b26b93;
     box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5);
@@ -353,7 +353,8 @@ h2 {
     -moz-box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5); }
   #contact input::placeholder {
     color: #b26b93;
-    font-size: 12px; }
+    font-size: 12px;
+    padding: 10px; }
   #contact .button {
     margin: 0 auto;
     display: block;
@@ -589,13 +590,13 @@ footer #social {
     #contact p {
       margin: 20px 0;
       font-size: 18px;
-      line-height: 28px; }
+      line-height: 18px; }
     #contact label {
       margin-top: 15px;
       font-size: 18px; }
     #contact input::placeholder {
-      font-size: 16px;
-      padding: 15px 10px; }
+      font-size: 14px;
+      padding: 5px 10px; }
     #contact img {
       margin-top: 80px; }
     #contact .button {
