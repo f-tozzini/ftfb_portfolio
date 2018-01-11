@@ -139,17 +139,22 @@
         <div class="large-6 medium-6 small-12 columns">
           <h2>Contact Me</h2>
           <p>Let’s get to work! If you like my style, message me and we can start creating amazing projects together!</p>
-          <form id="contactForm" action="form.php" method="post">
+          <form id="contactForm" action="includes/contact.php" method="post">
+
                   <label for="name">Name:</label>
                   <input type="text" required id="name" name="name" size="50" placeholder="Tell me your name" class="inputs">
 
                   <label for="email">Email:</label>
-                  <input type="email" required id="email" size="30" placeholder="Enter your Email" class="inputs">
+                  <input type="email" name="email" required id="email" size="30" placeholder="Enter your Email" class="inputs">
 
-                  <label for="lastname">Message:</label>
-                  <input type="text" required id="lastname" name="lastName" size="30" placeholder="Write your message here! :)" class="inputs">
+                  <label for="message">Message:</label>
+                  <input type="text" required id="message" name="message" size="30" placeholder="Write your message here! :)" class="inputs">
+
+                  <label for="street" class="street">Street:</label>
+                  <input type="text" class="street" id="street" name="street" size="30" placeholder="Away, bots!" class="inputs">
 
                   <input id="submit" type="submit" value="Submit" class="button">
+
            </form>
         </div>
 
