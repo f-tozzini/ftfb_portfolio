@@ -88,8 +88,7 @@ a, a:active, a:hover {
 #mainNav {
   color: white;
   position: relative;
-  z-index: 900;
-  overflow: scroll; }
+  z-index: 900; }
   #mainNav #navBox {
     background: #b26b93;
     /* Old browsers */
@@ -111,7 +110,6 @@ a, a:active, a:hover {
     border-bottom-left-radius: 12px; }
 
 i {
-  float: right;
   cursor: pointer; }
 
 .fa-bars {
@@ -124,7 +122,6 @@ i {
   z-index: 9999; }
 
 ul {
-  margin-top: 70px;
   padding-bottom: 40px; }
 
 li a {
@@ -150,7 +147,8 @@ li a {
   display: none; }
 
 i#open-menu, i#close-menu {
-  margin-top: 70px; }
+  margin-top: 50px;
+  padding-top: 30px; }
 
 .sticky {
   position: fixed; }
@@ -407,7 +405,6 @@ footer #social {
     margin: 0 auto;
     text-align: center;
     padding: 10px 13px;
-    display: block;
     position: relative;
     background-color: white;
     color: #b26b93;
@@ -490,7 +487,7 @@ footer #social {
 @media screen and (min-width: 31.25em) {
   /*500*/
   #navBox ul {
-    margin-top: 120px;
+    margin-top: 10px;
     margin-left: 20px; }
   #navBox li a {
     line-height: 110px; }
@@ -500,8 +497,7 @@ footer #social {
 
   footer #social {
     text-align: center;
-    margin-top: 15px;
-    margin-left: -8%; }
+    margin-top: 15px; }
 
   #thankyou h2 {
     margin-top: 10%;

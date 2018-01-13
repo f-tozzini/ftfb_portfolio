@@ -40,7 +40,6 @@
     color: white;
     position: relative;
     z-index: 900;
-    overflow: scroll;
     #navBox
     {
       @include pinkGradient;
@@ -56,13 +55,11 @@
     }
     i
     {
-      float: right;
       cursor: pointer;
 
     }
     .fa-bars
     {
-      // margin: 60px 40px 0 0;
       color: $mainPurple;
       z-index: 9999;
     }
@@ -70,10 +67,8 @@
       color: white;
       position: relative;
       z-index: 9999;
-      // margin: 60px 40px 0 30px;
     }
     ul {
-      margin-top: 70px;
       padding-bottom: 40px;
     }
     li a
@@ -105,7 +100,8 @@
   }
   i#open-menu, i#close-menu
   {
-    margin-top: 70px;
+    margin-top: 50px;
+    padding-top: 30px;
   }
 
   .sticky
@@ -285,7 +281,6 @@
     margin: 0 auto;
     z-index: 999999;
     margin-left: 13%;
-    // overflow: scroll;
       -webkit-box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
       -moz-box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
       box-shadow: 1px 1px 2px 1px rgba(64,64,64,0.5);
@@ -396,13 +391,11 @@
     {
       text-align: center;
       margin-top: 15px;
-      // margin-left: -2%;
     i
     {
       margin: 0 auto;
       text-align: center;
       padding: 10px 13px;
-      display: block;
       position: relative;
       background-color: white;
       color: $mainPurple;
@@ -456,7 +449,7 @@
     #navBox
     {
       ul {
-        margin-top: 120px;
+        margin-top: 10px;
         margin-left: 20px;
       }
       li a
@@ -475,7 +468,6 @@
           {
             text-align: center;
             margin-top: 15px;
-            margin-left: -8%;
           }
         }
         #thankyou h2
