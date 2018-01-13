@@ -8,7 +8,6 @@
   var mainNav = document.querySelector('#mainNav');
   var menuOpen = false;
 
-
   function displayMenu() {
     console.log('Trigger menu');
        mainMenu.style.overflow = "scroll";
@@ -71,16 +70,41 @@
     menuButton[i].addEventListener('click', scrollSection, false);
   }
 
+  //Menu - Click to close
+  var clickedNavDiv = document.querySelector('#navBox');
+  var clickedNavMenu = document.querySelector('#open-menu');
+  var menuDiv = document.querySelector('#main-menu');
+
+      function clickToClose (evt) {
+      if (!clickedNavMenu.contains(evt.target) &&
+      !clickedNavDiv.contains(event.target) &&
+      menuDiv.style.display == 'block') {
+          console.log('Close menu with click');
+          mainMenu.style.display = 'none';
+          if (hideMenu) {
+              hideMenu = true;
+              closeMenu.style.display = 'none';
+              triggerMenu.style.display = 'block';
+            }
+          }
+  };
+    document.body.addEventListener('click', clickToClose, false);
+
   //Lightbox
   var lightbox = document.querySelector('.lightbox');
   var lightboxTrigger = document.querySelectorAll('.trigger');
   var lightboxClose = document.querySelector('.close-lightbox');
+  var closeAll = document.querySelector('body');
 
   function showLightbox(currentIndex, currentObject) {
     console.log('showLightbox');
 
+    relpos = getPosition(document.querySelector('body'));
+
     lightbox.style.overflow = "scroll";
     lightbox.style.display = 'inline';
+    lightbox.style.top = (relpos.y + 15) + 'px';
+
     }
 
     for (let i = 0; i < lightboxTrigger.length; i++) {
@@ -94,5 +118,36 @@
   }
 
   lightboxClose.addEventListener('click', closeLightbox, false);
+
+// Lightbox position target to thumb
+
+function getPosition(el) {
+  var xPos = 0;
+  var yPos = 0;
+  var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+  var yScroll = el.scrollTop || document.documentElement.scrollTop;
+
+  while (el) {
+    if (el.tagName == "BODY") {
+      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+      yPos += (el.offsetTop - yScroll + el.clientTop);
+
+    } else {
+      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+    el = el.offsetParent;
+  }
+  return {
+    x: Math.abs(xPos),
+    y: Math.abs(yPos)
+  };
+}
+
+function updatePosition() {
+  relpos = getPosition(document.querySelector('body'));
+  lightbox.style.top = (relpos.y + 15) + 'px';
+}
+window.addEventListener("scroll", updatePosition, false);
 
   })();
