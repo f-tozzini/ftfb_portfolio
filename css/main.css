@@ -147,8 +147,7 @@ li a {
   display: none; }
 
 i#open-menu, i#close-menu {
-  margin-top: 50px;
-  padding-top: 30px; }
+  padding-top: 60px; }
 
 .sticky {
   position: fixed; }
@@ -282,21 +281,19 @@ h2 {
     #projects .projects:hover h3 {
       color: #b26b93;
       font-weight: bold; }
-  #projects #project6 {
-    margin-left: 11%;
-    margin-right: 9%;
-    display: block; }
+    #projects .projects:last-child {
+      margin-right: 10%; }
 
 .lightbox {
   display: none;
-  margin-top: -35px;
+  margin-top: 10px;
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   text-align: center;
   position: absolute;
-  margin: 0 auto;
   z-index: 999999;
+  position: scroll;
   margin-left: 13%;
   -webkit-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
   -moz-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
@@ -313,17 +310,20 @@ h2 {
   .lightbox .fa-times-circle-o {
     float: right; }
   .lightbox img {
-    height: 230px;
-    width: 250px;
-    opacity: 100%; }
+    height: 100%;
+    border-radius: 3px;
+    opacity: 100%;
+    -webkit-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
+    -moz-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
+    box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5); }
   .lightbox p {
     font-size: 12px;
     line-height: 24px;
-    padding: 15px 55px; }
+    padding: 15px 10px; }
   .lightbox h4 {
     font-family: "It Is Definitely Possible", Georgia, Times, serif;
     font-size: 24px;
-    padding: 10px 0; }
+    margin-top: 20px; }
 
 #contact {
   z-index: 2;
@@ -341,7 +341,6 @@ h2 {
     font-size: 12px; }
   #contact .inputs {
     border-radius: 8px;
-    padding: 10px;
     color: #b26b93;
     border-color: #b26b93;
     box-shadow: 3px 3px 10px 1px rgba(133, 133, 133, 0.5);
@@ -451,10 +450,11 @@ footer #social {
     font-size: 1.5em;
     line-height: 1.9em;
     text-align: center;
-    padding-top: 70px; }
+    padding: 70px 30px 0 30px; }
   #thankyou .button {
     margin: 0 auto;
     width: 40%;
+    font-size: 24px;
     margin: 0 auto;
     display: block;
     margin-bottom: 50px;
@@ -505,15 +505,13 @@ footer #social {
     font-size: 2em;
     line-height: 1.8em;
     text-align: center;
-    padding-top: 70px;
-    padding: 70px 15px 15px 0; } }
+    padding-top: 70px; } }
 @media screen and (min-width: 40em) {
   /*640*/
   #mainNav {
     padding: 40px 40px 10px 0;
     margin: -40px 0 0 -40px; }
     #mainNav ul {
-      margin-top: 85px;
       margin-left: 10%; }
     #mainNav li a {
       font-size: 30px;
@@ -574,13 +572,21 @@ footer #social {
       margin-right: 25px; }
 
   #projects .projects {
-    margin-left: 0%; }
-  #projects #project6 {
-    margin-left: 0;
-    margin-right: 0; }
+    margin-left: 10%; }
+    #projects .projects:last-child {
+      float: left; }
 
   .lightbox {
-    margin-left: 0%; }
+    margin-left: 0%;
+    margin-top: 1%; }
+    .lightbox img {
+      height: 120%;
+      border-radius: 8px; }
+    .lightbox h4 {
+      margin-top: 60px; }
+    .lightbox p {
+      font-size: 14px;
+      line-height: 22px; }
 
   #contact p {
     line-height: 22px; }
@@ -611,7 +617,7 @@ footer #social {
     #thankyou h2 {
       margin-top: 10%;
       color: #0b455c;
-      font-size: 2.5em;
+      font-size: 2.2em;
       line-height: 2.1em;
       text-align: center;
       padding-top: 70px; } }
@@ -660,6 +666,21 @@ footer #social {
     #about .button {
       font-size: 22px; }
 
+  #projects .projects {
+    margin-left: 0%; }
+    #projects .projects:last-child {
+      margin-right: 0%; }
+
+  .lightbox img {
+    height: 140%;
+    margin-top: -15px; }
+  .lightbox h4 {
+    margin-top: 120px; }
+  .lightbox p {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 20px 90px 40px 90px; }
+
   #contact {
     margin-top: 45px; }
     #contact p {
@@ -693,11 +714,9 @@ footer #social {
     #mainNav .fa-times-circle-o {
       font-size: 2.75em; }
     #mainNav ul {
-      margin-top: 85px;
       margin-left: 70px; }
     #mainNav li a {
-      font-size: 50px;
-      line-height: 100px; }
+      font-size: 45px; }
 
   #services {
     margin-left: 5%; } }
@@ -717,8 +736,6 @@ footer #social {
     padding-bottom: 100px;
     margin-right: 0;
     width: 65%; }
-    #mainNav ul {
-      margin-top: 150px; }
 
   #services {
     margin: 0 auto;
