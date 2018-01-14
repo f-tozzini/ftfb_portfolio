@@ -88,8 +88,7 @@ a, a:active, a:hover {
 #mainNav {
   color: white;
   position: relative;
-  z-index: 900;
-  overflow: scroll; }
+  z-index: 900; }
   #mainNav #navBox {
     background: #b26b93;
     /* Old browsers */
@@ -111,23 +110,18 @@ a, a:active, a:hover {
     border-bottom-left-radius: 12px; }
 
 i {
-  float: right;
   cursor: pointer; }
 
 .fa-bars {
-  z-index: 950;
-  margin: 60px 40px 0 0;
   color: #b26b93;
-  z-index: 599; }
+  z-index: 9999; }
 
 .fa-times-circle-o {
   color: white;
   position: relative;
-  z-index: 9999;
-  margin: 60px 40px 0 30px; }
+  z-index: 9999; }
 
 ul {
-  margin-top: 70px;
   padding-bottom: 40px; }
 
 li a {
@@ -151,6 +145,10 @@ li a {
 
 #main-menu, #close-menu {
   display: none; }
+
+i#open-menu, i#close-menu {
+  margin-top: 50px;
+  padding-top: 30px; }
 
 .sticky {
   position: fixed; }
@@ -214,12 +212,11 @@ h2 {
   #services .icons img {
     margin: 0 auto; }
   #services .services-box {
-    background-color: #0b455c;
-    height: 250px;
+    height: 180px;
     width: 240px;
     margin: 0 auto;
     margin-top: 15px;
-    color: #fff;
+    color: #0b455c;
     border-radius: 8px;
     position: relative; }
   #services h3 {
@@ -314,8 +311,7 @@ h2 {
     color: #b26b93;
     cursor: pointer; }
   .lightbox .fa-times-circle-o {
-    float: right;
-    padding: 20px 0 20px 0; }
+    float: right; }
   .lightbox img {
     height: 230px;
     width: 250px;
@@ -404,13 +400,11 @@ footer .logoFooter {
   display: block; }
 footer #social {
   text-align: center;
-  margin-top: 15px;
-  margin-left: -2%; }
+  margin-top: 15px; }
   footer #social i {
     margin: 0 auto;
     text-align: center;
     padding: 10px 13px;
-    display: block;
     position: relative;
     background-color: white;
     color: #b26b93;
@@ -492,20 +486,18 @@ footer #social {
 
 @media screen and (min-width: 31.25em) {
   /*500*/
-  #navBox .fa-bars {
-    margin: 60px 60px 0 0px; }
-  #navBox .fa-times-circle-o {
-    margin: 60px 60px 0 30px; }
   #navBox ul {
-    margin-top: 120px;
+    margin-top: 10px;
     margin-left: 20px; }
   #navBox li a {
     line-height: 110px; }
 
+  i#open-menu, i#close-menu {
+    margin-right: 30px; }
+
   footer #social {
     text-align: center;
-    margin-top: 15px;
-    margin-left: -8%; }
+    margin-top: 15px; }
 
   #thankyou h2 {
     margin-top: 10%;
@@ -520,10 +512,6 @@ footer #social {
   #mainNav {
     padding: 40px 40px 10px 0;
     margin: -40px 0 0 -40px; }
-    #mainNav .fa-bars {
-      margin: 70px 130px 0 0; }
-    #mainNav .fa-times-circle-o {
-      margin: 70px 130px 0 30px; }
     #mainNav ul {
       margin-top: 85px;
       margin-left: 10%; }
@@ -635,10 +623,6 @@ footer #social {
   #mainNav {
     padding: 20px 0 30px 0;
     margin-top: 0; }
-    #mainNav .fa-bars {
-      margin: 65px 180px 0 0px; }
-    #mainNav .fa-times-circle-o {
-      margin: 65px 180px 0 30px; }
     #mainNav li a {
       font-size: 45px;
       line-height: 90px;
@@ -705,10 +689,8 @@ footer #social {
     margin-top: 0px;
     margin-left: 40px; }
     #mainNav .fa-bars {
-      margin: 55px 180px 0 0;
       font-size: 2.75em; }
     #mainNav .fa-times-circle-o {
-      margin: 55px 180px 0 30px;
       font-size: 2.75em; }
     #mainNav ul {
       margin-top: 85px;
@@ -721,6 +703,10 @@ footer #social {
     margin-left: 5%; } }
 @media screen and (min-width: 85.375em) {
   /*1366*/
+  .bg-image {
+    left: 0;
+    right: 0; }
+
   header {
     margin-bottom: 15%; }
     header .fa-angle-double-down {
@@ -731,11 +717,6 @@ footer #social {
     padding-bottom: 100px;
     margin-right: 0;
     width: 65%; }
-    #mainNav .fa-bars {
-      margin: 90px 220px 0 0; }
-    #mainNav .fa-times-circle-o {
-      margin: 90px 220px 0 30px;
-      font-size: 2.75em; }
     #mainNav ul {
       margin-top: 150px; }
 
