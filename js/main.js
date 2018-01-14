@@ -99,17 +99,20 @@
   function showLightbox(currentIndex, currentObject) {
     console.log('showLightbox');
 
-    relpos = getPosition(document.querySelector('body'));
+    var projectId = currentIndex.currentTarget.id.replace("project", "");
+    GetProjectDetails(projectId);
 
-    lightbox.style.overflow = "scroll";
-    lightbox.style.display = 'inline';
-    lightbox.style.top = (relpos.y + 15) + 'px';
+    // relpos = getPosition(document.querySelector('body'));
+
+    // lightbox.style.overflow = "scroll";
+    // lightbox.style.display = 'inline';
+    // lightbox.style.top = (relpos.y + 15) + 'px';
 
     }
 
-    for (let i = 0; i < lightboxTrigger.length; i++) {
-      lightboxTrigger[i].addEventListener('click', showLightbox, false);
-    }
+    // for (let i = 0; i < lightboxTrigger.length; i++) {
+    //   lightboxTrigger[i].addEventListener('click', showLightbox, false);
+    // }
 
   function closeLightbox() {
     console.log('close lightbox');
@@ -146,8 +149,86 @@ function getPosition(el) {
 
 function updatePosition() {
   relpos = getPosition(document.querySelector('body'));
-  lightbox.style.top = (relpos.y + 15) + 'px';
+  lightbox.style.top = (relpos.y + 5) + 'px';
 }
 window.addEventListener("scroll", updatePosition, false);
+
+// fetch content from database
+FetchProjectThumb();
+
+   function FetchProjectThumb(){
+       var url = './includes/functions.php?getAllContent';
+
+       fetch(url)
+               .then(resp => resp.json())
+                .then(function(data){  LoadProjectDesc(data); } )
+                  .catch(function(error) {
+         console.log(error);
+
+       });
+
+   };
+
+   function LoadProjectDesc(data)
+   {
+       var html = "";
+
+       for(var i = 0; i < data.length; i++)
+       {
+           var projectId = data[i].projects_id;
+           var projectTitle = data[i].projects_title;
+           var projectThumb = data[i].projects_thumb;
+
+           html += "<div class='projects small-10 medium-4 large-4 columns'>";
+           html += "<img id='project" + projectId + "' src='images/" + projectThumb + "' alt='Project " + projectId + " Image and Link' class='trigger thumbs'>";
+           html += "<h3>" + projectTitle + "</h3>"
+           html += "</div>";
+
+       }
+
+       document.querySelector('#projectTiles').innerHTML = html;
+
+       AddLightboxTriggers();
+   }
+
+   function AddLightboxTriggers(){
+
+      var lightboxTrigger = document.querySelectorAll('.trigger');
+      for (var i = 0; i < lightboxTrigger.length; i++) {
+        lightboxTrigger[i].addEventListener('click', showLightbox, false);
+      }
+  }
+
+  function GetProjectDetails(projectId){
+
+      var url = './includes/functions.php?projectId='+projectId;
+
+       fetch(url)
+               .then(
+                   resp => resp.json()
+                   )
+               .then(function(data){  LoadProject(data); } )
+               .catch(function(error) {
+         console.log(error);
+
+       });
+  }
+
+  function LoadProject(data)
+  {
+       var projectDesc = data.projects_desc;
+       var projectTitle = data.projects_title;
+       var projectLb = data.project_lb;
+
+       document.querySelector(".lightbox-img").src = "images/" + projectLb;
+       document.querySelector(".lightbox-title").innerText = projectTitle;
+       document.querySelector(".lightbox-text").innerText = projectDesc;
+
+       lightbox.style.overflow = "scroll";
+       lightbox.style.display = 'inline';
+       lightbox.style.top = (relpos.y + 5) + 'px';
+  }
+
+
 
   })();
