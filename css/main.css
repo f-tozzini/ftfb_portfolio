@@ -286,22 +286,25 @@ h2 {
 
 .lightbox {
   display: none;
-  margin-top: 10px;
-  z-index: 3;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   text-align: center;
   position: absolute;
-  z-index: 999999;
+  z-index: 999;
+  width: 99%;
   position: scroll;
-  margin-left: 13%;
+  margin: 0 auto;
   -webkit-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
   -moz-box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5);
   box-shadow: 1px 1px 2px 1px rgba(64, 64, 64, 0.5); }
   .lightbox .lightbox-header {
     margin-top: 15px;
-    height: 230px;
+    height: 100%;
+    width: 100%;
     clear: both; }
+  .lightbox .lightbox-content {
+    overflow-y: scroll;
+    z-index: 9999; }
   .lightbox i {
     padding: 15px;
     margin-top: 10px;
@@ -577,8 +580,8 @@ footer #social {
       float: left; }
 
   .lightbox {
-    margin-left: 0%;
-    margin-top: 1%; }
+    margin-left: 0.5%;
+    margin-top: 0.5%; }
     .lightbox img {
       height: 120%;
       border-radius: 8px; }
