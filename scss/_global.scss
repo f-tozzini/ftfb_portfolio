@@ -49,3 +49,11 @@ body
   background: linear-gradient(45deg, rgba(8,52,69,1) 0%,rgba(178,107,147,1) 53%,rgba(238,147,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#083445', endColorstr='#ee9393',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+@mixin blue-purpleGradient{
+  background: rgb(0,97,137); /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba(0,97,137,1) 0%, rgba(178,107,147,1) 67%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(0,97,137,1) 0%,rgba(178,107,147,1) 67%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(0,97,137,1) 0%,rgba(178,107,147,1) 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006189', endColorstr='#b26b93',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

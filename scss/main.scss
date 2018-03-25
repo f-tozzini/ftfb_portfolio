@@ -4,7 +4,6 @@
 @import "global";
 @import "fonts";
 
-
 .hidden {
   display: none;
 }
@@ -548,14 +547,13 @@ footer
     box-shadow: 0 1rem 1.5rem -0.5rem rgba(0,0,0,.8), 20px -10px 30px -30px rgba(0,0,0,.8);
     -webkit-box-shadow: 0 1rem 1.5rem -0.5rem rgba(0,0,0,.8), 20px -10px 30px -30px rgba(0,0,0,.8);
     -moz-box-shadow: 0 1rem 1.5rem -0.5rem rgba(0,0,0,.8), 20px -10px 30px -30px rgba(0,0,0,.8);
-
     // -webkit-box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.75);
     // -moz-box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.75);
     // box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.75);
   }
   .left:hover, .right:hover {
       i.ion-arrow-left-c.arow, i.ion-arrow-right-c.arow{
-        @include blueGradient;
+        @include blue-purpleGradient;
       }
       h6{
         color: $mainBlue;
@@ -591,6 +589,20 @@ footer
     z-index: 33;
     margin-top: -23px;
     width: 150px;
+  }
+
+  .back-to-top{
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;;
+    border-radius: 100%;
+    z-index: 9999;
+    color: white;
+    @include pinkGradient;
+    &:hover{
+      @include blue-purpleGradient;
+    }
   }
 
 }
@@ -1044,7 +1056,11 @@ footer
     font-size:   1rem;
   }
   }
+  .back-to-top{
+    margin-right: 5px;
+  }
 }
+
 
 }
 
