@@ -565,6 +565,10 @@ footer #social {
     .project-content .project-desc p {
       font-size: 0.75rem;
       line-height: 1rem; }
+      .project-content .project-desc p a {
+        color: #b26b93; }
+        .project-content .project-desc p a:hover {
+          color: #ee9393; }
     .project-content .project-desc p:last-child {
       margin-top: 15px; }
   .project-content .brief-title {

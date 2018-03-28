@@ -79,7 +79,7 @@ var menuDiv = document.querySelector('#main-menu');
 
     function clickToClose (evt) {
     if (!clickedNavMenu.contains(evt.target) &&
-    !clickedNavDiv.contains(event.target) &&
+    !clickedNavDiv.contains(evt.target) &&
     menuDiv.style.display == 'block') {
         console.log('Close menu with click');
         mainMenu.style.display = 'none';

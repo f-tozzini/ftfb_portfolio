@@ -560,6 +560,12 @@ footer
       p{
         font-size: 0.75rem;
         line-height: 1rem;
+        a{
+          color:$mainPurple;
+          &:hover{
+            color: $mainPink;
+          }
+        }
       }
       p:last-child{
         margin-top: 15px;
