@@ -16,7 +16,7 @@
   clear: both;
 }
 
-a, a:active, a:hover
+a, a:active, a:hover, a:focus
 {
   color: white;
 }
@@ -41,6 +41,7 @@ a, a:active, a:hover
   z-index: 900;
   #navBox
   {
+
     @include pinkGradient;
     margin-top: 0;
     opacity: 0.95;
@@ -95,6 +96,7 @@ a, a:active, a:hover
   }
 #main-menu, #close-menu
 {
+  transition: all .5s ease-in-out;
   display: none;
 }
 i#open-menu, i#close-menu
@@ -175,7 +177,22 @@ h2
   cursor:default;
   color: #fff;
   margin: 15% 45%;
+  animation-name: scroll-down;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transition: all ease-in-out;
+  animation-timing-function: linear;
 }
+
+@keyframes scroll-down {
+     0%   {color: white;}
+     50% {color: $mainPurple;}
+     75% {color: $mainPurple;}
+     100%   {color: white;}
+
+}
+
+
 #services
 {
   padding-top: 30px;
@@ -271,7 +288,6 @@ h2
 
     .photo-wrapper{
     overflow: hidden;
-
     img {
       // height:100%;
       // width: 100%;

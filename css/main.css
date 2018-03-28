@@ -72,7 +72,7 @@ body {
   height: 0;
   clear: both; }
 
-a, a:active, a:hover {
+a, a:active, a:hover, a:focus {
   color: white; }
 
 #mainContainer, #thankyou {
@@ -144,6 +144,7 @@ li a {
   margin-left: -50px; }
 
 #main-menu, #close-menu {
+  transition: all .5s ease-in-out;
   display: none; }
 
 i#open-menu, i#close-menu {
@@ -199,8 +200,22 @@ h2 {
 .fa-angle-double-down {
   cursor: default;
   color: #fff;
-  margin: 15% 45%; }
+  margin: 15% 45%;
+  animation-name: scroll-down;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transition: all ease-in-out;
+  animation-timing-function: linear; }
 
+@keyframes scroll-down {
+  0% {
+    color: white; }
+  50% {
+    color: #b26b93; }
+  75% {
+    color: #b26b93; }
+  100% {
+    color: white; } }
 #services {
   padding-top: 30px;
   text-align: center;

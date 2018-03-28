@@ -33,6 +33,8 @@ function hideMenu(){
     }
 closeMenu.addEventListener('click', hideMenu, false);
 
+
+
 //Menu - go to Section
 var menuButton = mainMenu.querySelectorAll('a');
 var homeSect = document.querySelector('#mainHeader');
@@ -89,6 +91,7 @@ var menuDiv = document.querySelector('#main-menu');
         }
 };
   document.body.addEventListener('click', clickToClose, false);
+  window.addEventListener('scroll', clickToClose, false);
 
 
 
